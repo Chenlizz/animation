@@ -5,6 +5,7 @@ import {
 import Login from '../pages/Login';
 import BallGroup from '../pages/BallGroup/BallGroup';
 import Snow from '../pages/SnowDrop/Snow';
+import Lottie from '../pages/Lottie/lottie';
 
 export default class AppRouter extends Component {
   constructor(props) {
@@ -20,8 +21,10 @@ export default class AppRouter extends Component {
         {
           this.state.paramsReady ? (
             <Switch>
-              <Route path="/" exact component={Snow} />
+              <Route path="/" exact component={Lottie} />
               <Route path="/BallGroup" exact component={BallGroup} />
+              <Route path="/Lottie" exact component={Lottie} />
+              <Route path="/snow" exact component={Snow} />
               <Route path="/index" exact component={Login} />
               <Redirect to="/" />
             </Switch>

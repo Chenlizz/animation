@@ -1,0 +1,45 @@
+.outerBox {
+    width: 100%;
+    overflow: hidden;
+  
+    .lottieGroup {
+      width: 1000%;
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+  
+      .slideBox {
+        width: 10%;
+        float: left;
+      }
+    }
+  
+    .pointGroup {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      > div {
+        width: 6px;
+        height: 6px;
+        background: #dee0fe;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 0px rgba(221, 222, 254, 0.2);
+        transition: with 1s, background 1s;
+  
+        &:not(:nth-of-type(1)) {
+          margin-left: 10px;
+        }
+      }
+  
+      .active {
+        width: 8px;
+        height: 6px;
+        background: #737afb;
+      }
+    }
+  }
