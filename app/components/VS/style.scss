@@ -1,0 +1,24 @@
+.vs {
+  position: relative;
+  font-size: 24px;
+  opacity: 0.8;
+  font-weight: 900;
+  font-style: italic;
+
+  >div {
+    display: inline-block;
+  }
+
+  .v {
+    color: red;
+  }
+
+  .s {
+    color: blue;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    opacity: 0.6;
+  }
+}
+

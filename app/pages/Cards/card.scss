@@ -1,0 +1,113 @@
+.cardsBox {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+
+  .card {
+    position: relative;
+    width: 280px;
+    height: 140px;
+    border-radius: 12px;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #8063E1;
+    background-image: linear-gradient(135deg, #BD7BE8, #8063E1);
+    box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #8063E1;
+    transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
+    // transform: rotateX(28deg) rotateY(20deg) rotate(-40deg);
+
+    .account {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 80px;
+        height: 100px;
+        margin-right: 20px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -70px;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
+      transform: translateX(-100%);
+    }
+
+    .div {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 34px;
+    }
+
+    &:nth-of-type(1) {
+      // transform: rotateX(30deg) rotateY(-15deg) rotate(30deg) translate(-25px, 50px);
+      z-index: 3;
+    }
+
+    &:nth-of-type(2) {
+      z-index: 2;
+      margin-top: -70px;
+      background-color: #3F58E3;
+      background-image: linear-gradient(135deg, #7F94FC, #3F58E3);
+      box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #3F58E3;
+    }
+
+    &:nth-of-type(3) {
+      z-index: 1;
+      margin-top: -70px;
+      background-color: #2C6FD1;
+      background-image: linear-gradient(135deg, #21BBFE, #2C6FD1);
+      box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #2C6FD1;
+    }
+
+    &:nth-of-type(4) {
+      margin-top: -70px;
+      background-color: #352F64;
+      background-image: linear-gradient(135deg, #415197, #352F64);
+      box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #352F64;
+    }
+  }
+
+  .cardHover {
+    &:hover {
+      // transform: rotateX(30deg) rotateY(-15deg) rotate(30deg) translate(-25px, 50px);
+      transform: rotateX(30deg) rotateY(0deg) rotate(0deg) translate(-80px, 43px);
+      transition: all .3s ease-in-out;
+
+      &::after {
+        transform: translate(100%);
+        transition: all 1.2s ease-in-out;
+      }
+    }
+  }
+
+  .active {
+    transition: transform .3s ease-in-out;
+    transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, 0);
+    
+    &:nth-of-type(2) {
+      transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, -70px);
+    }
+
+    &:nth-of-type(3) {
+      transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, -140px);
+    }
+
+    &:nth-of-type(4) {
+      transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, -210px);
+    }
+
+    &+.card {
+      transition: margin-top .8s ease-in-out;
+      margin-top: -140px;
+    }
+  }
+}

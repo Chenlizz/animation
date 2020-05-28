@@ -1,0 +1,74 @@
+.cardBox {
+  position: relative;
+  margin-top: 440px;
+}
+
+.cardHolder {
+  position: relative;
+  width: 285px;
+  height: 145px;
+  background-color: #293237;
+  background-image: linear-gradient(to right, #2e3139, #4c5254);
+  box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+  box-shadow: -5px 0 15px #293237, 0px 0 0 #fff, 3px 0 0 #293237, 0px 0 0 #fff;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-radius: 0px 20px 20px 0px;
+  z-index: 10;
+
+
+  &::after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 40px;
+    height: 50px;
+    background-color: #a29fa8;
+    background-image: linear-gradient(to right, #5e6265, #a29fa8);
+    border-radius: 5px 5px 5px 5px;
+    transform: translate(0px, -50%) rotate(90deg);
+    z-index: 1;
+  }
+}
+
+.card {
+  position: absolute;
+  width: 280px;
+  height: 140px;
+  top: 20%;
+  left: 50%;
+  border-radius: 12px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #8063E1;
+  background-image: linear-gradient(135deg, #BD7BE8, #8063E1);
+  box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #8063E1;
+  transform: translate(-20px, 0px);
+  z-index: 2;
+
+  .account {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 80px;
+      height: 100px;
+      margin-right: 20px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
+    transform: translateX(-100%);
+  }
+}

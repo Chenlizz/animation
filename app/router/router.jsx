@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import {
   HashRouter, Switch, Route, Redirect, hashHistory,
 } from 'react-router-dom';
-import Login from '../pages/Login';
-import BallGroup from '../pages/BallGroup/BallGroup';
-import Snow from '../pages/SnowDrop/Snow';
-import Lottie from '../pages/Lottie/lottie';
+import MilkBtn from '../pages/MilkBtn/MilkBtn';
+import Buttons from '../pages/MilkBtn/Buttons';
+import WeatherCard from '../pages/WeatherCard/WeatherCard';
+
+import Clock from '../pages/Clock/Clock';
+
+
 
 export default class AppRouter extends Component {
   constructor(props) {
@@ -21,11 +24,20 @@ export default class AppRouter extends Component {
         {
           this.state.paramsReady ? (
             <Switch>
-              <Route path="/" exact component={Lottie} />
+              <Route path="/" exact component={ConfettiCannon} />
+              <Route path="/HeartAnimate" exact component={HeartAnimate} />
+              {/* vs */}
+              <Route path="/CoupleAn1" exact component={CoupleAn1} />
+              <Route path="/CoupleAn" exact component={CoupleAn} />
+              {/* vs */}
+
+              <Route path="/WeatherCard" exact component={WeatherCard} />
               <Route path="/BallGroup" exact component={BallGroup} />
               <Route path="/Lottie" exact component={Lottie} />
               <Route path="/snow" exact component={Snow} />
+              <Route path="/MilkBtn" exact component={MilkBtn} />
               <Route path="/index" exact component={Login} />
+              <Route path="/Buttons" exact component={Buttons} />
               <Redirect to="/" />
             </Switch>
           ) : <NoReady />

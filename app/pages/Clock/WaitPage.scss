@@ -1,0 +1,31 @@
+.waitPage {
+  padding-top: 20px;
+  text-align: center;
+
+  .text {
+    text-align: center;
+  
+    p {
+      &:nth-of-type(1) {
+        font-size: 16px;
+      }
+  
+      &:nth-of-type(2) {
+        color: #666;
+        font-size: 14px;
+      }
+    }
+  
+    div {
+      width: 80%;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 5px;
+      text-align: center;
+      background: #15162d;
+      color: white;
+      margin: 120px auto;
+      font-size: 17px;
+    }
+  }
+}

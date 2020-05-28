@@ -1,0 +1,154 @@
+.heartAnimate {
+  position: relative;
+  width: 50px;
+  margin: 50px auto 0px;
+  
+  $width: 50px;
+  $height: 50px;
+  $bubble-d: 50px;
+  $bubble-r: .5 * $bubble-d;
+
+  svg.h {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @mixin bubble($borderW) {
+    border-color: #cc8ef5;
+    border-width: $borderW;
+    transform: scale(1);
+  }
+
+  user-select: none;
+
+  @keyframes heart-beat {
+    0% {
+      background-position: left
+    }
+
+    100% {
+      background-position: right
+    }
+  }
+
+  [for='toggle-heart'] {
+    color: #aab8c2;
+    font-size: 34px;
+    cursor: pointer;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    display: block;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 50%;
+      display: block;
+    }
+
+    &::before {
+      box-sizing: border-box;
+      border: solid $bubble-r #e2264d;
+      width: $width;
+      height: $height;
+      transform: scale(0);
+    }
+  }
+
+  #toggle-heart {
+    position: absolute;
+    display: none;
+
+    &:checked+label {
+
+      &::before {
+        animation: inherit;
+        animation-timing-function: cubic-bezier(.21, .61, .35, 1);
+        will-change: transform, border-color, border-width;
+        animation-name: bubble;
+      }
+
+      color: #e2264d;
+      will-change: font-size;
+      animation: heart-beat2 .6s cubic-bezier(.17, .89, .32, 1.49);
+    }
+
+    &:checked~.svgHeart {
+      svg.h {
+        transition: margin cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s, fill 0.2s 0.6s, opacity 0.2s 0.8s, -webkit-transform 0.2s 0.6s;
+        opacity: 0;
+      }
+
+      svg.h.h-1 {
+        margin-top: -30px;
+      }
+
+      svg.h.h-2 {
+        margin-left: 30px;
+      }
+
+      svg.h.h-3 {
+        margin-top: 30px;
+      }
+
+      svg.h.h-4 {
+        margin-left: -30px;
+      }
+
+      svg.h.h-5 {
+        margin-top: -21px;
+        margin-left: 21px;
+      }
+
+      svg.h.h-6 {
+        margin-top: 21px;
+        margin-left: 21px;
+      }
+
+      svg.h.h-7 {
+        margin-top: -21px;
+        margin-left: -21px;
+      }
+
+      svg.h.h-8 {
+        margin-top: 21px;
+        margin-left: -21px;
+      }
+    }
+
+    &:focus + label {
+      text-shadow: 
+          0 0 3px #fff, 
+          0 1px 1px #fff, 0 -1px 1px #fff, 
+          1px 0 1px #fff, -1px 0 1px #fff;
+    }
+  }
+
+  @keyframes bubble {
+    15% {
+      @include bubble($bubble-r);
+    }
+
+    30%,
+    100% {
+      @include bubble(0);
+    }
+  }
+
+  @keyframes heart-beat2 {
+
+    0%,
+    17.5% {
+      font-size: 0;
+    }
+  }
+}

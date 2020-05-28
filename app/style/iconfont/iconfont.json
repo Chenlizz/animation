@@ -1,0 +1,121 @@
+{
+  "id": "1742524",
+  "name": "animation",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12380331",
+      "name": "国旗-长方形",
+      "font_class": "world-flag_-ALA--AlandIslands",
+      "unicode": "e7ee",
+      "unicode_decimal": 59374
+    },
+    {
+      "icon_id": "1647869",
+      "name": "巴西",
+      "font_class": "-baxi",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "3480979",
+      "name": "英国",
+      "font_class": "-yingguo",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "7434336",
+      "name": "ukraine 乌克兰",
+      "font_class": "-wukelan",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "7698751",
+      "name": "瑞典",
+      "font_class": "-ruidian",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "7974367",
+      "name": "德国",
+      "font_class": "-deguo",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "7974370",
+      "name": "中国",
+      "font_class": "-zhongguo",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "7974371",
+      "name": "美国",
+      "font_class": "-meiguo",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "10132688",
+      "name": "卢森堡",
+      "font_class": "-lusenbao",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "579286",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "10477221",
+      "name": "人员编制",
+      "font_class": "renyuanbianzhi",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "705030",
+      "name": "weather-windy",
+      "font_class": "wind",
+      "unicode": "eb8c",
+      "unicode_decimal": 60300
+    },
+    {
+      "icon_id": "4118084",
+      "name": "snow",
+      "font_class": "snow",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "4188889",
+      "name": "weather_1晴",
+      "font_class": "sun",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4188899",
+      "name": "weather_9中雨",
+      "font_class": "rain",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "6805588",
+      "name": "Thunderstorm",
+      "font_class": "thunder",
+      "unicode": "e9b8",
+      "unicode_decimal": 59832
+    }
+  ]
+}

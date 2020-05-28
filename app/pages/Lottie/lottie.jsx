@@ -15,11 +15,20 @@ class Lottie extends Component {
 
     const developer = document.querySelector('.developer');
     lottie.loadAnimation({
-      container: developer, // 包含动画的dom元素
-      renderer: 'svg', //渲染出来的是什么格式svg、canvas、html
-      loop: true,  //循环播放
-      autoplay: true, //自动播放
+      container: developer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
       path: './pages//Lottie/jsons/18123-developer.json'
+    });
+
+    const developer2 = document.querySelector('.developer2');
+    lottie.loadAnimation({
+      container: developer2,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: './pages//Lottie/jsons/20613-notification.json'
     });
 
     this.slide();
@@ -124,6 +133,14 @@ class Lottie extends Component {
         <div className="lottieGroup">
           <div className="slideBox">
             <div class="learning"></div>
+            <div className="text">
+              <div>全新改版</div>
+              <div>全面优化体验，操作更便捷</div>
+            </div>
+          </div>
+
+          <div className="slideBox">
+            <div class="developer2"></div>
             <div className="text">
               <div>全新改版</div>
               <div>全面优化体验，操作更便捷</div>

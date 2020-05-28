@@ -1,0 +1,38 @@
+.weatherCard {
+  height: 100vh;
+  background: -webkit-linear-gradient(210deg, rgba(150, 50, 50, 0.3), rgba(0, 0, 200, 0));
+  background: linear-gradient(240deg, rgba(150, 50, 50, 0.3), rgba(0, 0, 200, 0));
+  overflow: auto;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+
+    >div {
+      margin: 23px;
+      cursor: pointer;
+
+      &:hover {
+        color: #444;
+      }
+    }
+
+    .active {
+      color: #4444ff;
+    }
+  }
+
+  #card {
+    box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 300px;
+    padding: 0;
+    height: 400px;
+    min-height: 300px;
+    margin: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+}

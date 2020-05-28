@@ -1,0 +1,138 @@
+.coupleAn {
+  margin-top: 30px;
+}
+
+.couple {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+  padding-bottom: 10px;
+
+  .leftItem {
+    animation: leftItem-left .8s;
+  }
+
+  .rightItem {
+    animation: rightItem-right .8s;
+  }
+
+  @-webkit-keyframes leftItem-left {
+    0% {
+      transform: translate3d(-145px, 0, 0) scale(2);
+      opacity: 0.5;
+    }
+    50%,60% {
+      transform: translate3d(76px, 0, 0) scale(2);
+      opacity: 0.8;
+    }
+    85% {
+      transform: translate3d(-10px, 0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes rightItem-right {
+    0% {
+      transform: translate3d(145px, 0, 0) scale(2);
+      opacity: 0.5;
+    }
+    50%,60% {
+      transform: translate3d(-76px, 0, 0) scale(2);
+      opacity: 0.8;
+    }
+    85% {
+      transform: translate3d(10px, 0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.bar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  >div {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    color: white;
+
+    .icon-dianzan {
+      padding: 0px 10px;
+    }
+
+    >span:nth-of-type(2) {
+      line-height: 30px;
+    }
+  }
+
+  .leftItem {
+    background: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+    padding-left: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 0;
+      height: 0;
+      border-width: 30px;
+      border-color: transparent;
+      border-top-color: #eb325a;
+      border-style: solid;
+      z-index: 2;
+    }
+  }
+
+  .rightItem {
+    background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+    text-align: right;
+    padding-right: 10px;
+
+    .icon-dianzan {
+      display: inline-block;
+      transform: rotateY(180deg);
+    }
+  }
+
+  .plus {
+    color: white;
+    animation: plusAnimation 1s;
+    display: none;
+    opacity: 0;
+    padding: 0px 10px;
+  }
+
+  .increace {
+    display: inline-block;
+  }
+
+  @-webkit-keyframes plusAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    50%, 60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.mapParent,
+#map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #111;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.mapParent {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  #front path,
+  #front polyline {
+    stroke-width: 15;
+  }
+
+  .three-D {
+    transform-style: preserve-3d;
+    transform: translate(0%, 0%) rotateX(-60deg) rotateY(0deg) rotateZ(-10deg) scale(1.7);
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    margin: 0;
+  }
+
+  path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+  }
+
+  .red path {
+    stroke: #f44336;
+  }
+
+  .orange path {
+    stroke: #ff5722;
+  }
+
+  .green path {
+    stroke: #4caf50;
+  }
+
+  .blue path {
+    stroke: #2196f3;
+  }
+
+  .yellow path {
+    stroke: #ffeb3b;
+  }
+}

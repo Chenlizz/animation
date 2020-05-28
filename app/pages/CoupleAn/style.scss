@@ -1,0 +1,102 @@
+.index {
+  background: white;
+  padding: 25px 20px;
+  min-height: 100vh;
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .dec {
+    font-size: 12px;
+    color: #94a0a9;
+
+    &.decTxt {
+      position: relative;
+      padding-left: 6px;
+
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: #94a0a9;
+      }
+    }
+
+    .iconfont {
+      font-size: 12px;
+      padding: 0px 3px;
+    }
+  }
+
+  .discussionArea {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px;
+
+    .positive {
+      width: 50%;
+      margin-right: 4px;
+      .title {
+        color: #f56462;
+      }
+      .block {
+        border-top: 1px solid #f56462;
+        background: linear-gradient(to bottom, #ffe7e6 0%, #fafafa 100%);
+      }
+    }
+    .negative {
+      width: 50%;
+      margin-left: 4px;
+      .title {
+        color: #2899d4;
+      }
+      .block {
+        border-top: 1px solid #2899d4;
+        background: linear-gradient(to bottom, #cce5f1 0%, #ffffff 100%);
+      }
+    }
+
+    .block {
+      border-radius: 5px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 8px 6px 12px;
+      margin-bottom: 10px;
+
+      .id {
+        display: flex;
+        align-items: center;
+      }
+
+      .photo {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: #b7d0e2;
+        margin-right: 8px;
+      }
+      .msg {
+        padding-top: 20px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.couple {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}

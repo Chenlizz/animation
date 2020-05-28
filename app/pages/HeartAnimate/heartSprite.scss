@@ -1,0 +1,11 @@
+.heartSprite {
+  width: 100px;
+  height: 100px;
+  background-image: url(./img/heart.png);
+  background-position: left;
+}
+
+.active {
+  animation: heart-beat .8s steps(28) 1 forwards;
+  display: inline-block;
+}
