@@ -21,8 +21,7 @@ import ThreePlanet from './pages/ThreePlanet/ThreePlanet';
 function Main() {
   return (
     <div>
-      {/* <BallGroup /> */}
-      {/* <ConfettiCannon /> */}
+      <BallGroup />
       {/* <Clock width="200" height="200" clockRadius="100" /> */}
       {/* <WaitPage /> */}
       {/* <CoupleAn /> */}

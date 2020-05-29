@@ -1,11 +1,9 @@
-body {
-  overflow: hidden;
-}
-
 .box {
+  position: relative;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
+  height: 100vh;
 
   canvas {
     background-image: linear-gradient(#9FF781, #F3F781);
@@ -24,12 +22,15 @@ body {
       &:nth-of-type(1) {
         color: white;
         letter-spacing: 1px;
-        font-size: 7vmin;
+        font-size: 70px;
+        line-height: 70px;
         font-weight: 700;
       }
-  
+
       &:nth-of-type(2) {
-  
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
       }
     }
   }

@@ -4,7 +4,7 @@ import { getDistance, randomIntFromRange, randomFloatFromRange, resolveCollision
 
 class Partical extends Component {
   componentDidMount() {
-    const myCanvas = document.querySelector('#myCanvas');
+    const myCanvas = document.querySelector('#myCanvas3');
     if (!myCanvas.getContext) return;
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
@@ -100,7 +100,7 @@ class Partical extends Component {
 
   render() {
     return (
-      <canvas id="myCanvas" />
+      <canvas id="myCanvas3" />
     );
   }
 }

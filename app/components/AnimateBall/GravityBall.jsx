@@ -3,7 +3,7 @@ import commonTool from '../../utils/commonTool';
 
 class GravityBall extends Component {
   componentDidMount() {
-    const myCanvas = document.querySelector('#myCanvas');
+    const myCanvas = document.querySelector('#myCanvas2');
     if (!myCanvas.getContext) return;
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
@@ -57,10 +57,10 @@ class GravityBall extends Component {
       this.update = function () {
         if (this.y + this.radius + this.dy + 0.8 > myCanvas.height) {
           this.dy = -this.dy;
-          this.dy += 0.9; // friction
+          this.dy += 0.9; // 摩擦
           if (this.dx === 0) {
             return;
-          } else if(this.dx > 0) {
+          } else if (this.dx > 0) {
             this.dx -= 0.1;
           } else {
             this.dx += 0.1;
@@ -86,7 +86,7 @@ class GravityBall extends Component {
 
   render() {
     return (
-      <canvas id="myCanvas" />
+      <canvas id="myCanvas2" />
     );
   }
 }

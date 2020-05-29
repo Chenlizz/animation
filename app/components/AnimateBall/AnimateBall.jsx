@@ -4,7 +4,7 @@ import './style.scss';
 
 class AnimateBall extends Component {
   componentDidMount() {
-    const myCanvas = document.querySelector('#myCanvas');
+    const myCanvas = document.querySelector('#myCanvas1');
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
     let mouse = {};
@@ -47,7 +47,7 @@ class AnimateBall extends Component {
 
       this.draw = function () {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false); // 创建圆形
         ctx.fillStyle = this.color;
         ctx.fill();
         ctx.closePath();
@@ -80,7 +80,7 @@ class AnimateBall extends Component {
 
   render() {
     return (
-      <canvas id="myCanvas" />
+      <canvas id="myCanvas1" />
     );
   }
 }
