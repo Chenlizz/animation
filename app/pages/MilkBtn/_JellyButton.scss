@@ -1,0 +1,76 @@
+.wrapperParent {
+  height: 100vh;
+  background-color: #5d4257;
+  background-image: linear-gradient(315deg, #5d4257 0%, #a5c7b7 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    height: 50px;
+    line-height: 50px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .jellyButton {
+      width: 90%;
+      height: 100%;
+      cursor: pointer;
+      text-align: center;
+      background-color: #08e1ae;
+      background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+      border: none;
+      border-radius: 50px 50px 30px 30px;
+      transition: 1s;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      font-size: 30px;
+      font-weight: 700;
+      color: rgba(37, 61, 29, 0.7);
+      font-family: 'Fredoka One', cursive;
+
+      >div {
+        display: inline-block;
+        transition: 1s;
+      }
+
+      &:hover {
+        border-radius: 100px 100px 20px 20px;
+        height: 45px;
+        line-height: 45px;
+        width: 165px;
+
+        >div {
+          letter-spacing: 5px;
+          font-size: 25px;
+          transition: 1s;
+
+          &:nth-of-type(1) {
+            transform: rotate(-25deg);
+          }
+
+          &:nth-of-type(2) {
+            transform: rotate(-15deg);
+          }
+
+          &:nth-of-type(3) {
+            transform: rotate(10deg);
+          }
+
+          &:nth-of-type(4) {
+            transform: rotate(15deg);
+          }
+
+          &:nth-of-type(5) {
+            transform: rotate(-15deg);
+          }
+        }
+      }
+
+      &:active {
+        filter: hue-rotate(180deg);
+      }
+    }
+  }
+}

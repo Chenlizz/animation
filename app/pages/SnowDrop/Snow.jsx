@@ -8,6 +8,7 @@ class Snow extends Component {
       children: [],
     };
   }
+  
   componentDidMount() {
     this.body = document.querySelector('body');
     this.distance = 300;

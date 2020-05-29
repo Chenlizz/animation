@@ -21,6 +21,7 @@ import ThreePlanet from './pages/ThreePlanet/ThreePlanet';
 function Main() {
   return (
     <div>
+      {/* <BallGroup /> */}
       {/* <ConfettiCannon /> */}
       {/* <Clock width="200" height="200" clockRadius="100" /> */}
       {/* <WaitPage /> */}
@@ -30,14 +31,12 @@ function Main() {
       {/* <Icons /> */}
       {/* <Cards /> */}
       {/* <Snow /> */}
-      {/* <Lottie /> */}
+      {/* <Lottie /> */} {/* lottie 可行？ */}
       {/* <HeartAnimate /> */}
       {/* <HeartSprite /> */}
-      {/* <Follow /> */}
-      {/* <BallGroup /> */}
       {/* <Buttons /> */}
       {/* <SubWay /> */}
-      <StrokeExm />
+      {/* <StrokeExm /> */}
       {/* <ThreePlanet /> */}
     </div>
   )

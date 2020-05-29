@@ -5,10 +5,7 @@ import {
 import MilkBtn from '../pages/MilkBtn/MilkBtn';
 import Buttons from '../pages/MilkBtn/Buttons';
 import WeatherCard from '../pages/WeatherCard/WeatherCard';
-
 import Clock from '../pages/Clock/Clock';
-
-
 
 export default class AppRouter extends Component {
   constructor(props) {
