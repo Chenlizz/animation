@@ -1,4 +1,5 @@
 import React from 'react';
+import AppRouter from './router/router';
 import ConfettiCannon from './pages/ConfettiCannon/ConfettiCannon';
 import CircleLoading from './pages/CircleLoading/CircleLoading';
 import Icons from './pages/Icons/Loading';
@@ -21,7 +22,7 @@ import ThreePlanet from './pages/ThreePlanet/ThreePlanet';
 function Main() {
   return (
     <div>
-      <BallGroup />
+      <AppRouter />
       {/* <Clock width="200" height="200" clockRadius="100" /> */}
       {/* <WaitPage /> */}
       {/* <CoupleAn /> */}

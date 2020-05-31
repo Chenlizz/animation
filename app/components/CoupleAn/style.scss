@@ -22,14 +22,18 @@
       transform: translate3d(-145px, 0, 0) scale(2);
       opacity: 0.5;
     }
-    50%,60% {
+
+    50%,
+    60% {
       transform: translate3d(76px, 0, 0) scale(2);
       opacity: 0.8;
     }
+
     85% {
       transform: translate3d(-10px, 0, 0) scale(1);
       opacity: 1;
     }
+
     100% {
       transform: translate3d(0, 0, 0) scale(1);
       opacity: 1;
@@ -41,14 +45,18 @@
       transform: translate3d(145px, 0, 0) scale(2);
       opacity: 0.5;
     }
-    50%,60% {
+
+    50%,
+    60% {
       transform: translate3d(-76px, 0, 0) scale(2);
       opacity: 0.8;
     }
+
     85% {
       transform: translate3d(10px, 0, 0) scale(1);
       opacity: 1;
     }
+
     100% {
       transform: translate3d(0, 0, 0) scale(1);
       opacity: 1;
@@ -126,7 +134,8 @@
       transform: scale(0);
     }
 
-    50%, 60% {
+    50%,
+    60% {
       opacity: 1;
     }
 
