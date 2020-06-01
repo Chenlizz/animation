@@ -18,7 +18,7 @@ class JellyGroup extends Component {
           <p>Spring <br /> Animation</p>
         </div>
         <div className="heartAnParent">
-          <HeartAnimate />
+          {/* <HeartAnimate /> */}
         </div>
       </div>
     )

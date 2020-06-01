@@ -11,6 +11,8 @@ import BallGroup from '../pages/BallGroup/BallGroup';
 import loading from '../pages/Icons/Loading';
 import HeartAnimate from '../pages/HeartAnimate/HeartAnimate';
 import CoupleAn1 from '../pages/CoupleAn/CoupleAn1';
+import Card3 from '../pages/Cards/Card3';
+import Login from '../pages/Login';
 
 export default class AppRouter extends Component {
   constructor(props) {
@@ -32,15 +34,15 @@ export default class AppRouter extends Component {
               <Route path="/CoupleAn1" exact component={CoupleAn1} />
               {/* <Route path="/CoupleAn" exact component={CoupleAn} /> */}
               {/* vs */}
-
+              <Route path="/index" exact component={Login} />
               <Route path="/loading" exact component={loading} />
-              {/* <Route path="/BallGroup" exact component={BallGroup} />
-              <Route path="/Lottie" exact component={Lottie} />
+              <Route path="/BallGroup" exact component={BallGroup} />
+              {/*<Route path="/Lottie" exact component={Lottie} />
               <Route path="/snow" exact component={Snow} />
               <Route path="/MilkBtn" exact component={MilkBtn} />
-              <Route path="/index" exact component={Login} />
               <Route path="/Buttons" exact component={Buttons} /> */}
               <Route path="/JellyGroup" exact component={JellyGroup} />
+              <Route path="/Card3" exact component={Card3} />
               <Redirect to="/" />
             </Switch>
           ) : <NoReady />

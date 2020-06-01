@@ -1,0 +1,496 @@
+// line graph and bullet colors
+$incomeColor1: rgb(20, 138, 255);
+$incomeColor2: rgb(0, 218, 255);
+$expendColor1: rgb(255, 36, 115);
+$expendColor2: rgb(253, 41, 239);
+
+// card and drawer starting positions
+$cardPos: 76px;
+$drawerPos: -370px;
+$animDur: 9s;
+
+.card3Container {
+  background: #fff;
+  border-radius: 10px;
+  margin: 40px auto;
+  width: 310px;
+  height: 520px;
+  perspective: 600px;
+  -webkit-perspective: 600px;
+
+  // for tan and blue bars on the sides
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 96px;
+    width: 20px;
+    height: 110px;
+    animation: fadeTop $animDur linear;
+    // infinite
+  }
+
+  &:before {
+    background: rgb(231, 215, 199);
+    border-radius: 0 5px 5px 0;
+    left: 0;
+  }
+
+  &:after {
+    background: linear-gradient(rgb(165, 215, 255), rgb(155, 183, 255));
+    border-radius: 5px 0 0 5px;
+    right: 0;
+  }
+}
+
+/* Interface is split into top and bottom sections so that an 'overflow: hidden;' used to keep the drawer hidden doesn’t cause the card’s perspective to be lost. */
+.top {
+  height: 150px;
+  transform-style: preserve-3d;
+}
+
+.bottom {
+  border-radius: 0 0 10px 10px;
+  height: 370px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 22px;
+  height: 16px;
+  animation: fadeTop $animDur linear;
+  // infinite
+
+  span {
+    background: rgb(202, 157, 248);
+    display: block;
+    margin-bottom: 5px;
+    height: 2px;
+
+    &:nth-of-type(2) {
+      width: 50%;
+    }
+
+    &:nth-of-type(3) {
+      width: 80%;
+    }
+  }
+}
+
+.cardItem {
+  background: linear-gradient(rgb(255, 89, 150), rgb(255, 73, 117));
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px rgba(255, 89, 150, 0.2), -8px 8px 8px rgba(255, 89, 150, 0.2);
+  color: #fff;
+  margin: auto;
+  overflow: hidden;
+  width: 230px;
+  height: 150px;
+  transform: translateY(76px);
+  transform-style: preserve-3d;
+  animation: flipCard $animDur ease-out;
+  // infinite
+}
+
+.card-front,
+.card-back {
+  height: 150px;
+  width: 230px;
+  position: absolute;
+}
+
+.card-front {
+  animation: hideFront $animDur linear;
+  // infinite
+}
+
+.card-back {
+  opacity: 0;
+  text-align: center;
+  transform: rotate(180deg) scale(-1, 1);
+  animation: showBack $animDur linear;
+  // infinite
+  z-index: 1;
+}
+
+.number {
+  font-size: 14pt;
+  line-height: 116px;
+  text-align: center;
+  word-spacing: -7px;
+}
+
+.due-date {
+  font-family: Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  float: left;
+  margin: 0 0 0 20px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  word-spacing: 7px;
+}
+
+.bal {
+  font-weight: 300;
+  padding: 20px 0 5px 0;
+  opacity: 0.5;
+}
+
+.bal-value {
+  font-size: 24pt;
+  letter-spacing: 1px;
+
+  span {
+    font-size: 12pt;
+  }
+}
+
+.legend {
+  color: #aaa;
+  font-size: 10pt;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  left: 72px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  animation: fadeLegend $animDur ease-out;
+  // infinite
+
+  li {
+    display: inline;
+    margin-right: 20px;
+
+    &:before {
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      margin-right: 10px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.drawer {
+  background: #fff linear-gradient(rgba(202, 157, 248, 0.3), transparent 15px);
+  font-size: 10pt;
+  position: absolute;
+  bottom: $drawerPos;
+  width: 100%;
+  height: 370px;
+  z-index: 2;
+  animation: pullOut $animDur cubic-bezier(0, 1, 0.6, 1);
+  // infinite
+
+  // thick line in center
+  &:before {
+    background: rgb(206, 189, 226);
+    border-radius: 12px;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 24px;
+    height: 4px;
+    margin-left: -12px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    background: linear-gradient(90deg, transparent 71px, rgb(237, 223, 251) 71px, rgb(237, 223, 251) 72px, transparent 72px);
+    display: block;
+    padding: 10px 0 20px 0;
+    width: 100%;
+    height: auto;
+    animation: slideIn $animDur cubic-bezier(0, 1, 0.6, 1);
+    // infinite
+
+    &:first-of-type {
+      padding-top: 25px;
+    }
+
+    @for $i from 2 through 4 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: 0s + ($i / 25);
+      }
+    }
+  }
+
+  span {
+    color: rgb(206, 189, 226);
+    display: inline-block;
+    position: relative;
+    font-weight: 300;
+    line-height: 25px;
+    text-indent: 10px;
+
+    &:nth-of-type(1) {
+      width: 72px;
+    }
+
+    &:nth-of-type(2) {
+      color: rgb(90, 52, 132);
+      font-weight: bold;
+
+      &:before {
+        border: 10px solid #fff;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -3px;
+        left: -20px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      text-indent: 116px;
+    }
+  }
+}
+
+/* Income bullet */
+.income:before {
+  background: linear-gradient(90deg, $incomeColor1, $incomeColor2);
+}
+
+/* Income line gradient */
+.income-start {
+  stop-color: $incomeColor1;
+}
+
+.income-stop {
+  stop-color: $incomeColor2;
+}
+
+/* Expend bullet */
+.expend:before {
+  background: linear-gradient(90deg, $expendColor1, $expendColor2);
+}
+
+/* Expend line gradient */
+.expend-start {
+  stop-color: $expendColor1;
+}
+
+.expend-stop {
+  stop-color: $expendColor2;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+/* Animations */
+@keyframes flipCard {
+  0% {
+    box-shadow: 8px 8px 8px rgba(255, 89, 150, 0.2), -8px 8px 8px rgba(255, 89, 150, 0.2);
+    transform: translateY($cardPos) rotateX(0deg);
+  }
+
+  40% {
+    box-shadow: 8px 8px 8px rgba(255, 89, 150, 0.2), -8px 8px 8px rgba(255, 89, 150, 0.2);
+    transform: translateY($cardPos) rotateX(0deg);
+  }
+
+  43.33% {
+    box-shadow: 8px -8px 8px rgba(255, 89, 150, 0.2), -8px -8px 8px rgba(255, 89, 150, 0.2);
+    transform: translateY($cardPos) rotateX(185deg);
+  }
+
+  44.44% {
+    transform: translateY($cardPos) rotateX(177deg);
+  }
+
+  46.66% {
+    transform: translateY($cardPos) rotateX(180deg);
+  }
+
+  52.22% {
+    transform: translateY($cardPos) rotateX(180deg);
+  }
+
+  56.66% {
+    transform: translateY($cardPos - 40) rotateX(180deg);
+  }
+
+  85.55% {
+    transform: translateY($cardPos - 40) rotateX(180deg);
+  }
+
+  87.77% {
+    box-shadow: 8px -8px 8px rgba(255, 89, 150, 0.2), -8px -8px 8px rgba(255, 89, 150, 0.2);
+    transform: translateY($cardPos) rotateX(180deg);
+  }
+
+  91.11% {
+    box-shadow: 8px 8px 8px rgba(255, 89, 150, 0.2), -8px 8px 8px rgba(255, 89, 150, 0.2);
+    transform: translateY($cardPos) rotateX(-5deg);
+  }
+
+  94.44% {
+    transform: translateY($cardPos) rotateX(3deg);
+  }
+
+  100% {
+    transform: translateY($cardPos) rotateX(0deg);
+  }
+}
+
+@keyframes hideFront {
+  0% {
+    opacity: 1;
+  }
+
+  41.16% {
+    opacity: 1;
+  }
+
+  41.17% {
+    opacity: 0;
+  }
+
+  89.55% {
+    opacity: 0;
+  }
+
+  89.56% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showBack {
+  0% {
+    opacity: 0;
+  }
+
+  41.16% {
+    opacity: 0;
+  }
+
+  41.17% {
+    opacity: 1;
+  }
+
+  89.55% {
+    opacity: 1;
+  }
+
+  89.56% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 1;
+  }
+
+  45.55% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  96.66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLegend {
+  0% {
+    opacity: 0;
+  }
+
+  5.55% {
+    opacity: 1;
+  }
+
+  66.66% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-$drawerPos);
+  }
+
+  53.33% {
+    transform: translateY(-$drawerPos);
+  }
+
+  56.66% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pullOut {
+  0% {
+    bottom: $drawerPos;
+  }
+
+  51.11% {
+    bottom: $drawerPos;
+  }
+
+  58.88% {
+    bottom: 0;
+  }
+
+  86.66% {
+    bottom: 0;
+  }
+
+  93.33% {
+    bottom: $drawerPos;
+  }
+
+  100% {
+    bottom: $drawerPos;
+  }
+}

@@ -1,6 +1,54 @@
 .login {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 700px;
   background: #ffffff;
+  position: relative;
 
+  .temp {
+    width: 100px;
+    min-height: 100px;
+    background: red;
+    position: absolute;
+    //animation-name 规定需要绑定到选择器的 keyframe 名称。。
+    //animation-duration 规定完成动画所花费的时间，以秒或毫秒计。
+    //animation-timing-function 规定动画的速度曲线。
+    //animation-delay 规定在动画开始之前的延迟。
+    //animation-iteration-count 规定动画应该播放的次数。
+    //animation-direction 规定是否应该轮流反向播放动画。
+    // 顺序要求
+    //animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    //定义动画的流程
+  }
+
+  .run_top_right {
+    display: block;
+    animation: run-right-right 3s 0.4s 1 linear,
+      run-right-top 3s 0.4s 1 cubic-bezier(.22, .83, .89, .15);
+    //animation: run-right-right 3s 0.4s 1 linear, run-right-top 3s 0.4s 1 ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  //向上走的动画初始及结尾值
+  @keyframes run-right-top {
+    0% {
+      bottom: 40px;
+    }
+
+    100% {
+      bottom: 600px;
+    }
+  }
+
+  //向上右的动画初始及结尾值
+  @keyframes run-right-right {
+    0% {
+      left: 40px;
+      transform: scale(0.7);
+    }
+
+    100% {
+      left: 600px;
+      transform: scale(0.45);
+    }
+  }
 }

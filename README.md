@@ -1,4 +1,3 @@
 # animation
 
-
-渐变  
+cnpm install node-sass --save-dev

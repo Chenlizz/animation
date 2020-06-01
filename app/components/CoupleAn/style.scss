@@ -15,11 +15,12 @@
 
   .rightItem {
     animation: rightItem-right .8s;
+    // cubic-bezier(0, 1.7, .45, 1.01)
   }
 
   @-webkit-keyframes leftItem-left {
     0% {
-      transform: translate3d(-145px, 0, 0) scale(2);
+      transform: translate3d(-245px, 0, 0) scale(2);
       opacity: 0.5;
     }
 
