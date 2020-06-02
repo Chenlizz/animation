@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import StrokeExm from './StrokeExm';
 import './style.scss';
 
 class SubWay extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+    };
+  }
+
   componentDidMount() {
     const container = document.querySelector('#map');
     const svgBack = document.querySelector('#back');
@@ -39,7 +47,12 @@ class SubWay extends Component {
     const sheet = document.createElement('style');
     sheet.innerHTML = style;
     document.body.appendChild(sheet);
-    console.log(sheet, document.body);
+  }
+
+  onClick = () => {
+    this.setState({
+      active: !this.state.active
+    });
   }
 
   render() {
@@ -68,6 +81,10 @@ class SubWay extends Component {
             </g>
           </svg>
         </div>
+        <div className="btn" onClick={this.onClick}>
+          Click
+        </div>
+        {this.state.active ? <StrokeExm /> : ''}
       </div>
     )
   }

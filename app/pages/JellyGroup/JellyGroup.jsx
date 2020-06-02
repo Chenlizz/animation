@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import JellyButton from '../MilkBtn/JellyButton';
-import HeartAnimate from '../HeartAnimate/HeartAnimate';
+import DownLoad from '../DownLoad/DownLoad';
 import './style.scss';
 
 class JellyGroup extends Component {
@@ -19,6 +19,9 @@ class JellyGroup extends Component {
         </div>
         <div className="heartAnParent">
           {/* <HeartAnimate /> */}
+        </div>
+        <div className="downloadBox">
+          <DownLoad />
         </div>
       </div>
     )

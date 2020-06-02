@@ -70,4 +70,13 @@
   .yellow path {
     stroke: #ffeb3b;
   }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }

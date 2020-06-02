@@ -1,54 +1,279 @@
+body {
+  overflow: hidden;
+}
+
 .login {
-  width: 100vw;
-  height: 700px;
-  background: #ffffff;
+  min-height: 100vh;
   position: relative;
+  color: #fff;
 
-  .temp {
-    width: 100px;
-    min-height: 100px;
-    background: red;
+  $duration: 1.05s;
+  $delay: .3s;
+  $cubicBezier: cubic-bezier(.215, .61, .355, 1);
+
+  .page {
     position: absolute;
-    //animation-name 规定需要绑定到选择器的 keyframe 名称。。
-    //animation-duration 规定完成动画所花费的时间，以秒或毫秒计。
-    //animation-timing-function 规定动画的速度曲线。
-    //animation-delay 规定在动画开始之前的延迟。
-    //animation-iteration-count 规定动画应该播放的次数。
-    //animation-direction 规定是否应该轮流反向播放动画。
-    // 顺序要求
-    //animation: name duration timing-function delay iteration-count direction fill-mode play-state;
-    //定义动画的流程
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-  .run_top_right {
-    display: block;
-    animation: run-right-right 3s 0.4s 1 linear,
-      run-right-top 3s 0.4s 1 cubic-bezier(.22, .83, .89, .15);
-    //animation: run-right-right 3s 0.4s 1 linear, run-right-top 3s 0.4s 1 ease-out;
-    animation-fill-mode: forwards;
+  .fade {
+    z-index: 9;
+    background: #461467;
+    animation: fade $duration $cubicBezier 0s 1 forwards;
   }
 
-  //向上走的动画初始及结尾值
-  @keyframes run-right-top {
+  .fadeLeave {
+    z-index: -1;
+    background: #461467;
+    animation: fadeLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeLeave {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(.8);
+    }
+  }
+
+  .slide {
+    z-index: 9;
+    left: 100vw;
+    background: #ffba57;
+    animation: slide $duration $cubicBezier $delay 1 forwards,
+      scale .8s cubic-bezier(0, 1.24, .4, .97) 1.35s 1 forwards;
+    transform: scale(0.8);
+  }
+
+  .slideLeave {
+    z-index: -1;
+    background: #ffba57;
+    animation: slideLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes slideLeave {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide {
     0% {
-      bottom: 40px;
+      left: 100vw;
     }
 
-    100% {
-      bottom: 600px;
+    to {
+      left: 0px;
     }
   }
 
-  //向上右的动画初始及结尾值
-  @keyframes run-right-right {
+  @keyframes scale {
     0% {
-      left: 40px;
-      transform: scale(0.7);
+      transform: scale(0.8);
     }
 
-    100% {
-      left: 600px;
-      transform: scale(0.45);
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .slideUp {
+    z-index: 9;
+    top: 100vh;
+    background: #f5dd79;
+    animation: slideUp $duration $cubicBezier $delay 1 forwards,
+      scale .8s cubic-bezier(0, 1.24, .4, .97) 1.35s 1 forwards;
+    transform: scale(0.8);
+  }
+
+  .slideUpLeave {
+    z-index: -1;
+    background: #f5dd79;
+    animation: slideUpLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes slideUpLeave {
+    from {
+      top: 0;
+    }
+
+    to {
+      top: -100vh;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      top: 100vh;
+    }
+
+    to {
+      top: 0;
+    }
+  }
+
+  .zoom {
+    z-index: 9;
+    background: #ffc8bb;
+    animation: zoom $duration $cubicBezier $delay 1 forwards;
+  }
+
+  .zoomLeave {
+    z-index: -1;
+    background: #ffc8bb;
+    animation: zoomLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes zoomLeave {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      opacity: 0;
+      transform: scale(2);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .flipX {
+    z-index: 9;
+    opacity: 0;
+    background: #00dfcf;
+    animation: flipX $duration $cubicBezier $delay 1 forwards;
+  }
+
+  .flipXLeave {
+    z-index: -1;
+    background: #00dfcf;
+    animation: flipXLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes flipXLeave {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes flipX {
+    from {
+      opacity: 0;
+      transform: rotateX(90deg);
+      transform-origin: 50% 50%;
+    }
+
+    to {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+
+  .flipY {
+    z-index: 9;
+    opacity: 0;
+    background: #8ed3c9;
+    animation: flipY $duration $cubicBezier $delay 1 forwards;
+  }
+
+  .flipYLeave {
+    z-index: -1;
+    background: #8ed3c9;
+    animation: flipYLeave $duration $cubicBezier $delay 1 forwards;
+  }
+
+  @keyframes flipYLeave {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes flipY {
+    from {
+      opacity: 0;
+      transform: rotateY(90deg);
+      transform-origin: 50% 50%;
+    }
+
+    to {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+
+  .buttons {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 0);
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    padding: 0;
+
+    >div {
+      cursor: pointer;
+      overflow: hidden;
+      display: inline-block;
+      height: 30px;
+      line-height: 28px;
+      margin: 0 10px;
+      padding: 0 30px;
+      border-radius: 10px;
+      font: 12px Arial, sans-serif;
+      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      background: #505050;
+      opacity: 0.6;
+
+      &.active {
+        background: #b6b6b6;
+      }
+
+      >p {
+        display: inline-block;
+        margin: 8px auto;
+      }
     }
   }
 }

@@ -113,7 +113,7 @@ $animDur: 9s;
   opacity: 0;
   text-align: center;
   transform: rotate(180deg) scale(-1, 1);
-  animation: showBack $animDur linear;
+  // animation: showBack $animDur linear;
   // infinite
   z-index: 1;
 }

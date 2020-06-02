@@ -1,6 +1,5 @@
 import React from 'react';
 import AppRouter from './router/router';
-import ConfettiCannon from './pages/ConfettiCannon/ConfettiCannon';
 import CircleLoading from './pages/CircleLoading/CircleLoading';
 import Icons from './pages/Icons/Loading';
 import Cards from './pages/Cards/Card';
@@ -12,12 +11,8 @@ import CoupleAn1 from './pages/CoupleAn/CoupleAn1';
 import Lottie from './pages/Lottie/lottie';
 import HeartAnimate from './pages/HeartAnimate/HeartAnimate';
 import HeartSprite from './pages/HeartAnimate/HeartSprite';
-import Follow from './pages/HeartAnimate/Follow';
 import BallGroup from './pages/BallGroup/BallGroup';
 import Buttons from './pages/MilkBtn/Buttons';
-import SubWay from './pages/SubWay/SubWay';
-import StrokeExm from './pages/SubWay/StrokeExm';
-import ThreePlanet from './pages/ThreePlanet/ThreePlanet';
 
 function Main() {
   return (

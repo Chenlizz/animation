@@ -7,7 +7,7 @@ class StrokeExm extends Component {
 				<svg version="1.1" id="wrapper" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			width="273px" height="125.2px" viewBox="0 0 273 125.2" enable-background="new 0 0 273 125.2" xmlSpace="preserve">
 			<path 
-				class="path" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" 
+				class="path" fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" 
 				d="M2,65.7C49.2,3.8,29.8,2.1,27.4,2c-2.4-0.1-4.4,2.2-6.6,5.3c-10.2,14.8-10.4,40.3-8.7,45s4.6,15.3,11.7,16.5
 				c5.5,0.9,10.8-2.9,14.3-7.4c3.5-4.4,6-9.7,10.2-13.4c4.2-3.7,11.1-5.4,15.4-1.7c-5-0.4-10.3-0.4-14.9,1.7s-8.2,7.1-7.3,12.1
 				c1.1,5.9,8.5,9.2,14.2,7.3s9.5-7.6,10.8-13.5c0.6-3,0.5-6.5-1.7-8.5c-2.2-2-6.9-0.7-6.7,2.3c0.2,2.1,2.4,3.3,4.4,3.8
@@ -22,7 +22,7 @@ class StrokeExm extends Component {
 				c3.1,7.2,12.7,10.8,19.7,7.3c7-3.5,10.1-13.3,6.2-20.1c1.1,20,2.2,40,3.3,60c0.2,3.7,0,8.2-3.3,10c-4.1,2.3-8.9-2.1-10.7-6.5
 				c-4.6-11-1.6-24.8,7.3-32.9c4.7-4.3,10.8-6.9,15.8-10.9c5-4,9.2-10.1,7.9-16.4" />
 			<path 
-				fill="none" class="path2" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
+				fill="none" class="path2" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
 				d="M177.7,20.2c-2.3-2.5-7-2.1-8.8,0.8c-1.8,2.9,0,7.3,3.3,8.2c2.3,0.6,4.9-0.4,6.2-2.4S179.3,22,177.7,20.2z" />
 		</svg>
     );

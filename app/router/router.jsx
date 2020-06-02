@@ -28,7 +28,7 @@ export default class AppRouter extends Component {
         {
           this.state.paramsReady ? (
             <Switch>
-              <Route path="/" exact component={BallGroup} />
+              <Route path="/" exact component={Login} />
               <Route path="/HeartAnimate" exact component={HeartAnimate} />
               {/* vs */}
               <Route path="/CoupleAn1" exact component={CoupleAn1} />

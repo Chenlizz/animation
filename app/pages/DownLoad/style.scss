@@ -1,0 +1,51 @@
+.downLoadAn {
+  position: relative;
+  height: 100%;
+
+  .downLoad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #32aa66;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      line-height: 90px;
+      border: 5px solid #32aa66;
+      border-radius: 50%;
+      animation: download 1s ease 1s 1 forwards;
+
+      span {
+        font-size: 42px;
+      }
+    }
+
+    @keyframes download {
+      10% {
+        width: 250px;
+        height: 5px;
+        background: #32aa66;
+        border-radius: 5px;
+      }
+
+      100% {
+        width: 250px;
+        height: 5px;
+        background: #32aa66;
+        border-radius: 5px;
+      }
+    }
+  }
+}
