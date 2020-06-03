@@ -1,7 +1,7 @@
 .cardsBox {
   position: absolute;
-  top: 10%;
-  left: 30%;
+  top: 20%;
+  right: 5%;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
 
@@ -19,15 +19,23 @@
     transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
     // transform: rotateX(28deg) rotateY(20deg) rotate(-40deg);
 
-    .account {
-      display: flex;
-      align-items: center;
 
-      svg {
-        width: 80px;
-        height: 100px;
-        margin-right: 20px;
-      }
+    .number {
+      font-size: 14pt;
+      line-height: 116px;
+      text-align: center;
+      word-spacing: -7px;
+    }
+
+    .due-date {
+      font-family: Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      float: left;
+      margin: 0 0 0 20px;
+      opacity: 0.5;
+      text-transform: uppercase;
+      word-spacing: 7px;
     }
 
     &::after {
@@ -70,9 +78,9 @@
 
     &:nth-of-type(4) {
       margin-top: -70px;
-      background-color: #352F64;
-      background-image: linear-gradient(135deg, #415197, #352F64);
-      box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #352F64;
+      background-color: #ff4975;
+      background-image: linear-gradient(135deg, #ff5996, #ff4975);
+      box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #ff4975;
     }
   }
 
@@ -92,7 +100,7 @@
   .active {
     transition: transform .3s ease-in-out;
     transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, 0);
-    
+
     &:nth-of-type(2) {
       transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(-450px, -70px);
     }

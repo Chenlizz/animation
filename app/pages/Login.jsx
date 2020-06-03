@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import BallGroup from './BallGroup/BallGroup';
 import JellyGroup from './JellyGroup/JellyGroup';
 import SubWay from './SubWay/SubWay';
-import StrokeExm from './SubWay/StrokeExm';
 import ThreePlanet from './ThreePlanet/ThreePlanet';
+import CardsIndex from './Cards/index';
 import './style.scss';
 
 const types = ['fade', 'slide', 'slideUp', 'zoom', 'flipX', 'flipY'];
@@ -11,7 +11,7 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      active: 'fade',
+      active: 'slideUp',
     }
   }
 
@@ -34,7 +34,9 @@ class Login extends Component {
           }
         </div>
         <div className={`page ${active === 'slideUp' ? 'slideUp' : 'slideUpLeave'}`}>
-
+          {
+            active === 'slideUp' ? <CardsIndex /> : ''
+          }
         </div>
         <div className={`page ${active === 'zoom' ? 'zoom' : 'zoomLeave'}`}>
 

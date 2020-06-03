@@ -1,5 +1,4 @@
-import React, { Fragment, Component } from 'react';
-import Card2 from './Card2';
+import React, { Component } from 'react';
 import './card.scss';
 
 class Card extends Component {
@@ -18,60 +17,40 @@ class Card extends Component {
   render() {
     const { active } = this.state;
     return (
-      <Fragment>
-        <div className="cardsBox">
-          <div className={`${active === 1 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(1)}>
-            <div className="account">
-              <svg class="icon svg-icon" aria-hidden="true">
-                <use xlinkHref="#icon--yingguo"></use>
-              </svg>
-              {/* <span>美元账户</span> */}
-            </div>
-            <span>
-              <span>账面盈亏</span>
-              <span>-168.00 USD</span>
-            </span>
+      <div className="cardsBox">
+        <div className={`${active === 1 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(1)}>
+          <div class="number">
+            <code>6214 ******** 3266</code>
           </div>
-          <div className={`${active === 2 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(2)}>
-            <div className="account">
-              <svg class="icon svg-icon" aria-hidden="true">
-                <use xlinkHref="#icon--wukelan"></use>
-              </svg>
-              <span>美元账户</span>
-            </div>
-            <span>
-              <span>账面盈亏</span>
-              <span>-168.00 USD</span>
-            </span>
-          </div>
-          <div className={`${active === 3 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(3)}>
-            <div className="account">
-              <svg class="icon svg-icon" aria-hidden="true">
-                <use xlinkHref="#icon--zhongguo"></use>
-              </svg>
-              <span>美元账户</span>
-            </div>
-            <span>
-              <span>账面盈亏</span>
-              <span>-168.00 USD</span>
-            </span>
-          </div>
-          <div className={`${active === 4 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(4)}>
-            <div className="account">
-              <svg class="icon svg-icon" aria-hidden="true">
-                <use xlinkHref="#icon--meiguo"></use>
-              </svg>
-              <span>美元账户</span>
-            </div>
-            <span>
-              <span>账面盈亏</span>
-              <span>-168.00 USD</span>
-            </span>
+          <div class="due-date">
+            Due 11/19
           </div>
         </div>
-
-        <Card2 />
-      </Fragment >
+        <div className={`${active === 2 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(2)}>
+          <div class="number">
+            <code>6214 ******** 3266</code>
+          </div>
+          <div class="due-date">
+            Due 11/19
+          </div>
+        </div>
+        <div className={`${active === 3 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(3)}>
+          <div class="number">
+            <code>6214 ******** 3266</code>
+          </div>
+          <div class="due-date">
+            Due 11/19
+          </div>
+        </div>
+        <div className={`${active === 4 ? 'active' : 'cardHover'} card`} onClick={() => this.handleClick(4)}>
+          <div class="number">
+            <code>6214 ******** 3266</code>
+          </div>
+          <div class="due-date">
+            Due 11/19
+          </div>
+        </div>
+      </div>
     );
   }
 }
