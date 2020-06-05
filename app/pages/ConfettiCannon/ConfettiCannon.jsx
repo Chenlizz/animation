@@ -17,9 +17,7 @@ function randomFn(a, b) {
   return (Math.random() * (b - a)) + a;
 }
 
-const DECAY = 4;        // confetti decay in seconds
-const SPREAD = 60;      // degrees to spread from the angle of the cannon
-const GRAVITY = 1200;
+const SPREAD = 60;
 class ConfettiCannon extends Component {
   constructor(props) {
     super(props);
@@ -89,7 +87,7 @@ class ConfettiCannon extends Component {
         this.confettiSpriteIds.splice(key, 1); // 出界，删除
       }
       this.ctx.beginPath();
-      this.ctx.lineWidth = sprite.d / 2;
+      this.ctx.lineWidth = sprite.d / 2; // 彩片宽
       this.ctx.strokeStyle = sprite.color;
       this.ctx.moveTo(sprite.x + sprite.tilt + sprite.r, sprite.y);
       this.ctx.lineTo(sprite.x + sprite.tilt, sprite.y + sprite.tilt + sprite.r);
@@ -115,8 +113,8 @@ class ConfettiCannon extends Component {
       const d = randomFn(15, 25) * this.dpr;
       const color = `rgb(${randomFn(30, 255)}, ${randomFn(30, 230)}, ${randomFn(30, 230)})`;
       const tilt = randomFn(10, -10); // 倾斜
-      const tiltAngleIncremental = randomFn(0.07, 0.05);
-      const tiltAngle = 0;
+      const tiltAngleIncremental = randomFn(0.07, 0.05); // 倾斜角度增量
+      const tiltAngle = 0; // 倾斜角度
 
 
       const id = `${i}${r}${d}`;
@@ -211,7 +209,7 @@ class ConfettiCannon extends Component {
     const x1 = this.vector[1].x; // 终
     const y1 = this.vector[1].y;
     const direction = x0 === x1 ? 1 : ((x0 - x1) / Math.abs(x0 - x1));
-    const length = getLength(x0, y0, x1, y1);
+    const length = getLength(x0, y0, x1, y1); // 线长
     const angle = getDegAngle(x0, y0, x1, y1) + 180;
 
     const particles = length / 5 + 5; // 数量

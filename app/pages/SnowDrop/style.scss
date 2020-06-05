@@ -1,60 +1,76 @@
 .snow-demo-wrapper {
   background: #DFEAFF;
   overflow: hidden;
-  height: 100vh;
+  height: 568px;
   position: relative;
 
   .snow-demo {
+    $distance: 300px;
+    $boxWidth: 310px;
     width: 100%;
     height: 100%;
     margin: auto;
-    background-image: url(https://gw.alipayobjects.com/zos/rmsportal/dNpuKMDHFEpMGrTxdLVR.jpg);
+    background-image: url('../../style/img/Snowbg.jpg');
     background-position: top;
     background-size: 100% auto;
-
-    .addMoneyAnim {
-      background: url('https://gw.alipayobjects.com/zos/rmsportal/fseEOKMDOXOieJiHKuQg.png') no-repeat;
-      background-size: 420px 104px;
-      width: 52px;
-      height: 52px;
-      animation: rotateMoney 0.45s step-start infinite;
-      position: absolute;
-    }
 
     @function mod($a, $b) {
       @return $a - floor($a / $b) * $b;
     }
 
-    @keyframes rotateMoney {
-      @for $i from 0 through 15 {
-        @if {
-          #{(100% / 15 * $i)} {
-            background-position-x: -(mod($i, 8)*52px);
-            background-position-y: -(floor($i/8)*52px);
-          }
-        }
-      }
-    }
-
-    @function bodyWidth() {
-      @return calc(100% - 52px);
+    @function randomFn($a, $b) {
+      @return (random() * ($b - $a))+$a;
     }
 
     @for $i from 0 through 9 {
+      $left: random() * ($boxWidth - 52px);
+
       .snow-#{$i} {
-        animation-delay: random() * -0.6s;
+        background: url('../../style/img/fseEOKMDOXOieJiHKuQg.png') no-repeat;
+        background-size: 420px 104px;
+        width: 52px;
+        height: 52px;
+        background-position-x: -(mod($i, 8)*52px);
+        background-position-y: -(floor($i/8)*52px);
+        // animation: fall-#{$i} 3s linear random() * -0.6s 1 forwards;
+        position: absolute;
+        top: (random() * -$distance) - 52px;
+        left: $left;
+      }
+
+      @keyframes fall-#{$i} {
+        from {
+          transform: translate(0, 0) rotateY(0deg);
+        }
+
+        to {
+          transform: translate(randomFn(-$left, $boxWidth - $left), 100vh * 1.5) rotateY(random() * 360deg);
+        }
+      }
+
+      .start.snow-#{$i} {
+        animation: fall-#{$i} 2s linear random() * -0.6s 1 forwards;
+      }
+
+      .pause {
+        animation-play-state: paused; // 动画暂停
       }
     }
+  }
 
-    // .addMoneyFrame(@one, @frame, @i: 0, @name: 0%) when (@i =< @frame) {
-    //   .addMoneyFrame(@one, @frame, @i + 1, (100% / @frame * (@i + 1)));
-    //   @{name} {
-    //     background-position: -(mod(@i, @one) * 52px) -(floor(@i / @one)*52px);
-    //   }
-    // }
-
-    // @keyframes rotateMoney {
-    //   .addMoneyFrame(8, 15);
-    // }
+  .btn {
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(#ed9d47, #eb8724);
+    position: absolute;
+    bottom: 33px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
   }
 }

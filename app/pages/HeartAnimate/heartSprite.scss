@@ -9,3 +9,69 @@
   animation: heart-beat .8s steps(28) 1 forwards;
   display: inline-block;
 }
+
+
+.spriteBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .heartSprite {
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/heart.png);
+    background-position: left;
+  }
+
+  .active {
+    animation: heart-beat 1s steps(28) 1 forwards;
+    display: inline-block;
+  }
+
+  .roll {
+    position: absolute;
+    top: 0;
+    left: inherit;
+    z-index: -1;
+    opacity: 0;
+    width: 1000px;
+    height: 100px;
+    background: url(../HeartAnimate/img/heart.png) no-repeat 450px top;
+    border: 1px solid #fff;
+
+    &#showRoll {
+      opacity: .2;
+    }
+  }
+
+  .rollAnimate {
+    animation: roll 1s steps(28) forwards;
+  }
+
+  @keyframes heart-beat {
+    0% {
+      background-position: left
+    }
+
+    100% {
+      background-position: right
+    }
+  }
+
+  @keyframes roll {
+    0% {
+      background-position: 450px;
+    }
+
+    100% {
+      background-position: -2351px;
+    }
+  }
+}
+
+.showSpriteBtn {
+  width: 50;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}

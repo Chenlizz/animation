@@ -11,7 +11,7 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      active: 'slideUp',
+      active: 'slide',
     }
   }
 
@@ -39,7 +39,7 @@ class Login extends Component {
           }
         </div>
         <div className={`page ${active === 'zoom' ? 'zoom' : 'zoomLeave'}`}>
-
+          
         </div>
         <div className={`page ${active === 'flipX' ? 'flipX' : 'flipXLeave'}`}>
           {

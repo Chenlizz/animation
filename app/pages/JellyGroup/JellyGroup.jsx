@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import JellyButton from '../MilkBtn/JellyButton';
 import DownLoad from '../DownLoad/DownLoad';
+import Snow from '../SnowDrop/Snow';
+import CoupleAn from '../CoupleAn/CoupleAn';
+import Parabolic from '../Parabolic/Parabolic';
+import HeartSprite from '../HeartAnimate/HeartSprite';
 import './style.scss';
 
 class JellyGroup extends Component {
@@ -18,10 +22,15 @@ class JellyGroup extends Component {
           <p>Spring <br /> Animation</p>
         </div>
         <div className="heartAnParent">
-          {/* <HeartAnimate /> */}
+          <HeartSprite />
         </div>
         <div className="downloadBox">
-          <DownLoad />
+          {/* <DownLoad /> */}
+          {/* <Snow /> */}
+          {/* <CoupleAn /> */}
+        </div>
+        <div className="parabolicBox">
+          <Parabolic />
         </div>
       </div>
     )

@@ -4,8 +4,8 @@ import {
 } from 'react-router-dom';
 import MilkBtn from '../pages/MilkBtn/MilkBtn';
 import Buttons from '../pages/MilkBtn/Buttons';
-import WeatherCard from '../pages/WeatherCard/WeatherCard';
 import Clock from '../pages/Clock/Clock';
+import Snow from '../pages/SnowDrop/Snow';
 import JellyGroup from '../pages/JellyGroup/JellyGroup';
 import BallGroup from '../pages/BallGroup/BallGroup';
 import loading from '../pages/Icons/Loading';
@@ -34,11 +34,11 @@ export default class AppRouter extends Component {
               <Route path="/CoupleAn1" exact component={CoupleAn1} />
               {/* <Route path="/CoupleAn" exact component={CoupleAn} /> */}
               {/* vs */}
-              <Route path="/index" exact component={Login} />
+              <Route path="/Clock" exact component={Clock} />
               <Route path="/loading" exact component={loading} />
               <Route path="/BallGroup" exact component={BallGroup} />
+              <Route path="/Snow" exact component={Snow} />
               {/*<Route path="/Lottie" exact component={Lottie} />
-              <Route path="/snow" exact component={Snow} />
               <Route path="/MilkBtn" exact component={MilkBtn} />
               <Route path="/Buttons" exact component={Buttons} /> */}
               <Route path="/JellyGroup" exact component={JellyGroup} />
