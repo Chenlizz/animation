@@ -4,6 +4,7 @@ import JellyGroup from './JellyGroup/JellyGroup';
 import SubWay from './SubWay/SubWay';
 import ThreePlanet from './ThreePlanet/ThreePlanet';
 import CardsIndex from './Cards/index';
+import Part4Page from './Part4Page/Index';
 import './style.scss';
 
 const types = ['fade', 'slide', 'slideUp', 'zoom', 'flipX', 'flipY'];
@@ -39,7 +40,9 @@ class Login extends Component {
           }
         </div>
         <div className={`page ${active === 'zoom' ? 'zoom' : 'zoomLeave'}`}>
-          
+          {
+            active === 'zoom' ? <Part4Page /> : ''
+          }
         </div>
         <div className={`page ${active === 'flipX' ? 'flipX' : 'flipXLeave'}`}>
           {

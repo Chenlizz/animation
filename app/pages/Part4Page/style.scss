@@ -1,0 +1,35 @@
+.part4Box {
+  .snowBox {
+    width: 310px;
+    height: 520px;
+    background: #fff;
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    transform: translate(0, -50%);
+    border-radius: 10px;
+  }
+
+  .lottieBox {
+    width: 310px;
+    height: 520px;
+    background: #fff;
+    position: absolute;
+    left: 38.5%;
+    top: 45%;
+    transform: translate(0, -50%);
+    border-radius: 10px;
+  }
+
+  .coupleBox {
+    width: 310px;
+    height: 520px;
+    background: #fff;
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    transform: translate(0, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

@@ -13,6 +13,7 @@ import HeartAnimate from '../pages/HeartAnimate/HeartAnimate';
 import CoupleAn1 from '../pages/CoupleAn/CoupleAn1';
 import Card3 from '../pages/Cards/Card3';
 import Login from '../pages/Login';
+import Lottie from '../pages/Lottie/lottie';
 
 export default class AppRouter extends Component {
   constructor(props) {
@@ -38,9 +39,9 @@ export default class AppRouter extends Component {
               <Route path="/loading" exact component={loading} />
               <Route path="/BallGroup" exact component={BallGroup} />
               <Route path="/Snow" exact component={Snow} />
-              {/*<Route path="/Lottie" exact component={Lottie} />
+              <Route path="/Lottie" exact component={Lottie} />
               <Route path="/MilkBtn" exact component={MilkBtn} />
-              <Route path="/Buttons" exact component={Buttons} /> */}
+              <Route path="/Buttons" exact component={Buttons} />
               <Route path="/JellyGroup" exact component={JellyGroup} />
               <Route path="/Card3" exact component={Card3} />
               <Redirect to="/" />
