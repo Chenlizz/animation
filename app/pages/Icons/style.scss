@@ -31,62 +31,62 @@
     margin: 15px 33px;
   }
 
-  .jellyBoxParent {
-    // position: relative;
-    position: absolute;
-    top: 12%;
-    left: 15%;
-  }
+  // .jellyBoxParent {
+  //   // position: relative;
+  //   position: absolute;
+  //   top: 12%;
+  //   left: 15%;
+  // }
 
-  .jellyBox {
-    margin: 0 auto;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 3px;
-    animation: animate .5s linear infinite;
-  }
+  // .jellyBox {
+  //   margin: 0 auto;
+  //   width: 50px;
+  //   height: 50px;
+  //   background: #fff;
+  //   border-radius: 3px;
+  //   animation: animate .5s linear infinite;
+  // }
 
-  .shadow {
-    content: "";
-    position: absolute;
-    top: 120%;
-    left: 36%;
-    width: 50px;
-    height: 5px;
-    background: #000;
-    opacity: 0.1;
-    border-radius: 50%;
-    animation: shadow .5s linear infinite;
-    transform: translate(-70%, 0);
-  }
+  // .shadow {
+  //   content: "";
+  //   position: absolute;
+  //   top: 120%;
+  //   left: 36%;
+  //   width: 50px;
+  //   height: 5px;
+  //   background: #000;
+  //   opacity: 0.1;
+  //   border-radius: 50%;
+  //   animation: shadow .5s linear infinite;
+  //   transform: translate(-70%, 0);
+  // }
 
-  @keyframes shadow {
-    50% {
-      transform: scale(1.2, 1);
-    }
-  }
+  // @keyframes shadow {
+  //   50% {
+  //     transform: scale(1.2, 1);
+  //   }
+  // }
 
-  @keyframes animate {
-    17% {
-      border-bottom-right-radius: 3px;
-    }
+  // @keyframes animate {
+  //   17% {
+  //     border-bottom-right-radius: 3px;
+  //   }
 
-    25% {
-      transform: translateY(9px) rotate(22.5deg);
-    }
+  //   25% {
+  //     transform: translateY(9px) rotate(22.5deg);
+  //   }
 
-    50% {
-      transform: translateY(18px) scale(1, .9) rotate(45deg);
-      border-bottom-right-radius: 40px;
-    }
+  //   50% {
+  //     transform: translateY(18px) scale(1, .9) rotate(45deg);
+  //     border-bottom-right-radius: 40px;
+  //   }
 
-    75% {
-      transform: translateY(9px) rotate(67.5deg);
-    }
+  //   75% {
+  //     transform: translateY(9px) rotate(67.5deg);
+  //   }
 
-    100% {
-      transform: translateY(0) rotate(90deg);
-    }
-  }
+  //   100% {
+  //     transform: translateY(0) rotate(90deg);
+  //   }
+  // }
 }

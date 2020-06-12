@@ -5,6 +5,7 @@ import Snow from '../SnowDrop/Snow';
 import CoupleAn from '../CoupleAn/CoupleAn';
 import Parabolic from '../Parabolic/Parabolic';
 import HeartSprite from '../HeartAnimate/HeartSprite';
+import MotionFun from '../MotionFun/MotionFun';
 import './style.scss';
 
 class JellyGroup extends Component {
@@ -25,9 +26,7 @@ class JellyGroup extends Component {
           <HeartSprite />
         </div>
         <div className="downloadBox">
-          {/* <DownLoad /> */}
-          {/* <Snow /> */}
-          {/* <CoupleAn /> */}
+          <MotionFun />
         </div>
         <div className="parabolicBox">
           <Parabolic />

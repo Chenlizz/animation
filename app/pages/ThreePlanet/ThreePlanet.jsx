@@ -31,7 +31,8 @@ class ThreePlanet extends Component {
       lazyY: 0
     };
 
-    this.scene = new THREE.Scene(); // 创建场景对象
+    this.scene = new THREE.Scene(); // 创建场景对象, 我们的空间内「有什么」和「放在哪」
+    // (视景体竖直方向上（非水平！）的张角| 窗口大小的宽高比| 可以看到多近的物体| 可以看到多远的物体)
     this.camera = new THREE.PerspectiveCamera(45, this.width / this.height, 0.01, 10); // 透视投影相机
     this.camera.position.set(0, 0, 2);
 
@@ -93,7 +94,7 @@ class ThreePlanet extends Component {
       for (let j = 0; j < 3; j++) faceVertexUvs[i][j].y = planetGeometry.faces[i].vertexNormals[j].y * 0.5 + 0.5;
     }
 
-    let innerPlanet = new THREE.Mesh(planetGeometry, material); // 网格模型对象Mesh
+    let innerPlanet = new THREE.Mesh(planetGeometry, material); // 网格模型对象Mesh、粘合
     planet.add(innerPlanet);
     let planetOutline = new THREE.Mesh(planetGeometry, medium);
     planetOutline.scale.multiplyScalar(1.05);
@@ -105,7 +106,7 @@ class ThreePlanet extends Component {
   createRings = () => {
     let dark = new THREE.MeshBasicMaterial({
       color: mainColor,
-      side: THREE.DoubleSide
+      side: THREE.DoubleSide // 渲染面
     });
 
     let medium = new THREE.MeshBasicMaterial({
@@ -168,6 +169,7 @@ class ThreePlanet extends Component {
     }
   }
 
+  // 群星
   createMoons = () => {
     let bright = new THREE.MeshBasicMaterial({
       color: accentColor

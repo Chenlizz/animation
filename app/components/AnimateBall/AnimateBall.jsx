@@ -36,6 +36,7 @@ class AnimateBall extends Component {
       }
     }
     animate();
+    
     function Ball(x, y, radius, dx, dy, color) {
       this.x = x;
       this.y = y;

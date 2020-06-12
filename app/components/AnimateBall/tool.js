@@ -37,7 +37,7 @@ export function resolveCollision(b1, b2) {
   let v1Rotated = rotateVector(v1, theta);
   let v2Rotated = rotateVector(v2, theta);
 
-  // 通过完全弹性碰撞工时计算新速度（旋转后坐标）
+  // 通过完全弹性碰撞公式计算新速度（旋转后坐标）
   let v1RotatedAfterCollision = {
     dx: (v1Rotated.dx * (b1.mass - b2.mass) + 2 * b2.mass * v2Rotated.dx) / (b1.mass + b2.mass),
     dy: v1Rotated.dy,

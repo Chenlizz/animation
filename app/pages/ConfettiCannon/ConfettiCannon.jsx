@@ -89,8 +89,10 @@ class ConfettiCannon extends Component {
       this.ctx.beginPath();
       this.ctx.lineWidth = sprite.d / 2; // 彩片宽
       this.ctx.strokeStyle = sprite.color;
-      this.ctx.moveTo(sprite.x + sprite.tilt + sprite.r, sprite.y);
-      this.ctx.lineTo(sprite.x + sprite.tilt, sprite.y + sprite.tilt + sprite.r);
+      this.ctx.moveTo(sprite.x + sprite.r, sprite.y);
+      this.ctx.lineTo(sprite.x, sprite.y + sprite.tilt + sprite.r);
+      // this.ctx.moveTo(100 + 100, 100);
+      // this.ctx.lineTo(100, 100 + sprite.tilt + 100);
       this.ctx.stroke();
       this.updateConfettiParticle(id);
     });

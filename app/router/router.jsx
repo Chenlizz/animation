@@ -11,9 +11,13 @@ import BallGroup from '../pages/BallGroup/BallGroup';
 import loading from '../pages/Icons/Loading';
 import HeartAnimate from '../pages/HeartAnimate/HeartAnimate';
 import CoupleAn1 from '../pages/CoupleAn/CoupleAn1';
+import CoupleAn from '../pages/CoupleAn/CoupleAn';
 import Card3 from '../pages/Cards/Card3';
 import Login from '../pages/Login';
 import Lottie from '../pages/Lottie/lottie';
+import Ric from '../pages/RequestIdleCallback/index';
+import Partical from '../components/AnimateBall/Partical';
+import ConfettiCannon from '../pages/ConfettiCannon/ConfettiCannon';
 
 export default class AppRouter extends Component {
   constructor(props) {
@@ -33,7 +37,7 @@ export default class AppRouter extends Component {
               <Route path="/HeartAnimate" exact component={HeartAnimate} />
               {/* vs */}
               <Route path="/CoupleAn1" exact component={CoupleAn1} />
-              {/* <Route path="/CoupleAn" exact component={CoupleAn} /> */}
+              <Route path="/CoupleAn" exact component={CoupleAn} />
               {/* vs */}
               <Route path="/Clock" exact component={Clock} />
               <Route path="/loading" exact component={loading} />
@@ -44,6 +48,9 @@ export default class AppRouter extends Component {
               <Route path="/Buttons" exact component={Buttons} />
               <Route path="/JellyGroup" exact component={JellyGroup} />
               <Route path="/Card3" exact component={Card3} />
+              <Route path="/Ric" exact component={Ric} />
+              <Route path="/Partical" exact component={Partical} />
+              <Route path="/ConfettiCannon" exact component={ConfettiCannon} />
               <Redirect to="/" />
             </Switch>
           ) : <NoReady />
