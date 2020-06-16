@@ -7,9 +7,9 @@ class GravityBall extends Component {
     if (!myCanvas.getContext) return;
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
-    window.addEventListener('mousedown', () => {
-      init();
-    });
+    // window.addEventListener('mousedown', () => {
+    //   init();
+    // });
     window.addEventListener('resize', () => {
       myCanvas.width = window.innerWidth;
       myCanvas.height = window.innerHeight;

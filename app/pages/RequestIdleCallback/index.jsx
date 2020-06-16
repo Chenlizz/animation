@@ -11,11 +11,11 @@ class Ric extends Component {
     function step() {
       left += 1;
       element.style.left = left + "px";
-      // let i = 1000
-      // while (i > 0) {
-      //   console.log("i", i)
-      //   i--
-      // }
+      let i = 1000
+      while (i > 0) {
+        console.log("i", i)
+        i--
+      }
       if (left < 200) {
         requestAnimationFrame(step)
       }

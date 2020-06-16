@@ -8,9 +8,9 @@ class Partical extends Component {
     if (!myCanvas.getContext) return;
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
-    window.addEventListener('mousedown', () => {
-      init();
-    });
+    // window.addEventListener('mousedown', () => {
+    //   init();
+    // });
     window.addEventListener('resize', () => {
       myCanvas.width = window.innerWidth;
       myCanvas.height = window.innerHeight;
@@ -68,7 +68,7 @@ class Partical extends Component {
     let ballArr;
     function init() {
       ballArr = [];
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0; i < 50; i++) {
         let radius = randomIntFromRange(15, 20);
         let x = randomIntFromRange(radius, myCanvas.width - radius);
         let y = randomIntFromRange(radius, myCanvas.height - radius);

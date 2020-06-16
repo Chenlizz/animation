@@ -206,6 +206,7 @@ body {
   }
 
   .flipY {
+    overflow-y: hidden;
     z-index: 9;
     opacity: 0;
     background: #8ed3c9;
